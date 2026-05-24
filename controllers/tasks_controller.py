@@ -30,9 +30,9 @@ class TaskController:
         return await TaskServices.create_task(session, task)
 
     @staticmethod
-    async def delete_task(id: int):
-        return await TaskServices.delete_task(id)
+    async def delete_task(session: Session,id: int):
+        return await TaskServices.delete_task(session,id)
 
     @staticmethod
-    async def update_task(id: int, task: TaskUpdate):
-        return await TaskServices.update_task(id, task)
+    async def update_task(session: Session, id: int, task: TaskUpdate):
+        return await TaskServices.update_task(session ,id, task)
